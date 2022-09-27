@@ -33,11 +33,10 @@
          }
       },
       methods: {
-         getPosts(postPage = 1){
-            Axios.get('/api/posts', {
-               page: postPage
-            }).then((response) => {
-               this.posts = response.data.results;
+         getPosts(){
+            Axios.get('/api/posts').then((response) => {
+               console.log(response.data.results[0]);
+               this.posts = response.data.results[0];
             });
          }
       },

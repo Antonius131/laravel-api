@@ -10,7 +10,7 @@
                </div>
                <div class="row">
                   <div class="col-4">
-                     <PostCard />
+                     <PostCard  v-for="post in posts" :key="post.id" :post="post"/>
                   </div>
                </div>
             </div>

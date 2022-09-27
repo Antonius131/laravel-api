@@ -21,10 +21,28 @@
 
 <script>
    import PostCard from './PostCard.vue';
+   import Axios from 'axios';
 
    export default {
       components: {
          PostCard
+      },
+      data: function(){
+         return {
+            posts: [],
+         }
+      },
+      methods: {
+         getPosts(postPage = 1){
+            Axios.get('/api/posts', {
+               page: postPage
+            }).then((response) => {
+               this.posts = response.data.results;
+            });
+         }
+      },
+      created() {
+         this.getPosts();
       }
    }
 </script>

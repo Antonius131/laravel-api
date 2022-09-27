@@ -2016,7 +2016,7 @@ var staticRenderFns = [function () {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-12"
-  }, [_c("h2", [_vm._v("Main Content")])])]);
+  }, [_c("h2", [_vm._v("Posts:")])])]);
 }];
 render._withStripped = true;
 

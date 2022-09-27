@@ -5,7 +5,7 @@
             <div class="col-12">
                <div class="row">
                   <div class="col-12">
-                     <h2>Main Content</h2>
+                     <h2>Posts:</h2>
                   </div>
                </div>
                <div class="row">

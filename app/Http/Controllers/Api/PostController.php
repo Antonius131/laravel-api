@@ -21,7 +21,7 @@ class PostController extends Controller
             'response' => true,
             'count' => count($posts),
             'results' => [$posts]
-        ])
+        ]);
 
     }
 

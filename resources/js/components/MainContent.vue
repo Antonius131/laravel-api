@@ -9,8 +9,8 @@
                   </div>
                </div>
                <div class="row">
-                  <div class="col-4">
-                     <PostCard  v-for="post in posts" :key="post.id" :post="post"/>
+                  <div class="col-12">
+                     <PostCard v-for="post in posts" :key="post.id" :post="post"/>
                   </div>
                </div>
             </div>

@@ -1,12 +1,16 @@
 <template>
-   <div class="card m-3">
-      <h2>Hello hello</h2>
+   <div class="card my-4 p-3">
+      <h4 class="card-title">
+         {{ post.title }}
+      </h4>
    </div>
 </template>
 
 <script>
    export default {
-
+      props: [
+         'post'
+      ]
    }
 </script>
 

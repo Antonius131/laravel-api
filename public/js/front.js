@@ -1926,11 +1926,9 @@ __webpack_require__.r(__webpack_exports__);
     getPosts: function getPosts() {
       var _this = this;
 
-      var postPage = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/posts', {
-        page: postPage
-      }).then(function (response) {
-        _this.posts = response.data.results;
+      axios__WEBPACK_IMPORTED_MODULE_1___default.a.get('/api/posts').then(function (response) {
+        console.log(response.data.results[0]);
+        _this.posts = response.data.results[0];
       });
     }
   },
@@ -1950,7 +1948,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({});
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['post']
+});
 
 /***/ }),
 
@@ -1997,8 +1997,15 @@ var render = function render() {
   }, [_vm._m(0), _vm._v(" "), _c("div", {
     staticClass: "row"
   }, [_c("div", {
-    staticClass: "col-4"
-  }, [_c("PostCard")], 1)])])])])]);
+    staticClass: "col-12"
+  }, _vm._l(_vm.posts, function (post) {
+    return _c("PostCard", {
+      key: post.id,
+      attrs: {
+        post: post
+      }
+    });
+  }), 1)])])])])]);
 };
 
 var staticRenderFns = [function () {
@@ -2031,17 +2038,14 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm._m(0);
+  return _c("div", {
+    staticClass: "card my-4 p-3"
+  }, [_c("h4", {
+    staticClass: "card-title"
+  }, [_vm._v("\n      " + _vm._s(_vm.post.title) + "\n   ")])]);
 };
 
-var staticRenderFns = [function () {
-  var _vm = this,
-      _c = _vm._self._c;
-
-  return _c("div", {
-    staticClass: "card m-3"
-  }, [_c("h2", [_vm._v("Hello hello")])]);
-}];
+var staticRenderFns = [];
 render._withStripped = true;
 
 

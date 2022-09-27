@@ -158,10 +158,23 @@ var render = function render() {
     staticClass: "row py-5"
   }, [_c("div", {
     staticClass: "col-12"
-  }, [_c("h2", [_vm._v("Main Content")]), _vm._v(" "), _c("PostCard")], 1)])])]);
+  }, [_vm._m(0), _vm._v(" "), _c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col-4"
+  }, [_c("PostCard")], 1)])])])])]);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "row"
+  }, [_c("div", {
+    staticClass: "col-12"
+  }, [_c("h2", [_vm._v("Main Content")])])]);
+}];
 render._withStripped = true;
 
 
@@ -182,10 +195,17 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div");
+  return _vm._m(0);
 };
 
-var staticRenderFns = [];
+var staticRenderFns = [function () {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _c("div", {
+    staticClass: "card m-3"
+  }, [_c("h2", [_vm._v("Hello hello")])]);
+}];
 render._withStripped = true;
 
 

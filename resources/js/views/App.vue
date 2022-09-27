@@ -1,15 +1,18 @@
 <template>
    <section>
-      <h2>This is your Vue instance</h2>
+      <MainContent />
    </section>
 </template>
 
 <script>
+   import MainContent from '../components/MainContent.vue';
    export default {
-
+      components: {
+         MainContent
+      }
    }
 </script>
 
 <style>
-   
+
 </style>

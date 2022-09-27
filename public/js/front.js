@@ -2040,9 +2040,13 @@ var render = function render() {
 
   return _c("div", {
     staticClass: "card my-4 p-3"
+  }, [_c("div", {
+    staticClass: "card-body"
   }, [_c("h4", {
     staticClass: "card-title"
-  }, [_vm._v("\n      " + _vm._s(_vm.post.title) + "\n   ")])]);
+  }, [_vm._v("\n         " + _vm._s(_vm.post.title) + "\n      ")]), _vm._v(" "), _c("small", [_vm._v("\n         " + _vm._s(_vm.post.date) + "\n      ")]), _vm._v(" "), _c("p", {
+    staticClass: "card-text"
+  }, [_vm._v("\n         " + _vm._s(_vm.post.article_text.substring(0, 150)) + "\n      ")])])]);
 };
 
 var staticRenderFns = [];

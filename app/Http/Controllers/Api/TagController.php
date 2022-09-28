@@ -15,12 +15,11 @@ class TagController extends Controller
      */
     public function index()
     {
-        $tags = Tag::with('posts');
+        $tags = Tag::with('posts')->get();
 
         return response()->json([
             'response' => true,
-            'count' => count($tags),
-            'results' => [$tags]
+            'results' => $tags
         ]);
     }
 
